@@ -12,7 +12,7 @@ def run_root_commands(commands):
         text=True
     )
     
-    
+    # I'm assuming you already have root access on the device :)
     command_sequence = 'su\n' + '\n'.join(commands) + '\nexit\nexit\n'
     stdout, stderr = process.communicate(command_sequence)
     return stdout, stderr, process.returncode
